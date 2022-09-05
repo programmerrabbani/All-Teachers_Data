@@ -1,0 +1,84 @@
+
+
+
+
+
+
+<div class="container my-5 teachers-form">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <a href="/teacher" class="btn btn-sm btn-primary">Back</a>
+            <br>
+            <br>
+            <div class="card shadow">
+                <div class="card-header">
+                    <h2 class="text-center">Add New Teachers</h2>
+                </div>
+                <div class="card-body">
+                    
+                    <form action="/teacher/create" method="post" enctype="multipart/form-data">
+
+                        <div class="my-3">
+                            <label for="">Name</label>
+                            <input type="text" name="name" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Email</label>
+                            <input type="text" name="email" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Cell</label>
+                            <input type="text" name="cell" class="form-control">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Location</label>
+                            <select name="location" id="" class="form-control">
+                                <option value="">-Select-</option>
+                                <option value="Uttora">Uttora</option>
+                                <option value="Bonani">Bonani</option>
+                                <option value="Badda">Badda</option>
+                                <option value="Gulshan">Gulshan</option>
+                                <option value="Mirpur">Mirpur</option>
+                            </select>
+                        </div>
+                        <div class="my-3">
+                            <label for="">Photo</label>
+                            <br>
+                            <img class="preload-photo" src="" alt="">
+                            <br>
+                            <label for="upload-teacher-photo">
+                                 <img src="https://freeiconshop.com/wp-content/uploads/edd/image-outline-filled.png" alt="">
+                            </label>
+                            <input type="file" name="teacher-photo" id="upload-teacher-photo">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Video</label>
+                            <br>
+                            <img class="preload-video" src="" alt="">
+                            <br>
+                            <label for="upload-teacher-video">
+                                 <img src="https://www.iconpacks.net/icons/1/free-video-icon-818-thumb.png" alt="">
+                            </label>
+                            <input type="file" name="teacher-video" id="upload-teacher-video">
+                        </div>
+                        <div class="my-3">
+                            <label for="">Audio</label>
+                             <br>
+                            <img class="preload-audio" src="" alt="">
+                            <br>
+                            <label for="upload-teacher-audio">
+                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlkLy8ATl_kTLrdhZFPVn2wo_uz7WMDtg4JAV6QEUPOdli-EtITr0FRHfkoScSo0p6JGU&usqp=CAU" alt="">
+                            </label>
+                            <input type="file" name="teacher-audio" id="upload-teacher-audio">
+                        </div>
+                        <div class="my-3">
+                            <input type="submit" value="Create" class="btn btn-sm btn-primary w-100">
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

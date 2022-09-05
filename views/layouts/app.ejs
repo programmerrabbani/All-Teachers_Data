@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+
+ 
+    
+    <%- body %> 
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+            $('.osthir-table').DataTable();
+
+            const teacherImage = document.querySelector('#upload-teacher-photo');
+            const teacherImageTag = document.querySelector('.preload-photo');
+
+            const teacherVideo = document.querySelector('#upload-teacher-video');
+            const teacherVideoTag = document.querySelector('.preload-video');
+
+            const teacherAudio = document.querySelector('#upload-teacher-audio');
+            const teacherAudioTag = document.querySelector('.preload-audio');
+
+            teacherImage.onchange = (e) =>{
+
+                const imageLink = URL.createObjectURL(e.target.files[0]);
+                teacherImageTag.setAttribute('src' , imageLink);
+
+            }
+
+            teacherVideo.onchange = (e) =>{
+
+                const videoLink = URL.createObjectURL(e.target.files[0]);
+                teacherVideoTag.setAttribute('src' , videoLink);
+
+            }
+
+            teacherAudio.onchange = (e) =>{
+
+                const audioLink = URL.createObjectURL(e.target.files[0]);
+                teacherAudioTag.setAttribute('src' , audioLink);
+
+            }
+
+    </script>
+
+</body>
+</html>
